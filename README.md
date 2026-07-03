@@ -14,8 +14,6 @@ Déployer une plateforme GLPI conteneurisée sur une infrastructure Linux virtue
 - GLPI
 - MariaDB
 - Nginx
-- Prometheus
-- Grafana
 - Uptime Kuma
 - GitHub
 - GitHub Actions
@@ -31,8 +29,6 @@ Les différents services seront déployés dans des conteneurs Docker :
 - GLPI
 - MariaDB
 - Nginx
-- Prometheus
-- Grafana
 - Uptime Kuma
 
 L'ensemble sera administré via Git et GitHub.
