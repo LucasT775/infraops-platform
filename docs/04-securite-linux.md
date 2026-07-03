@@ -17,6 +17,7 @@ Les ports autorisés sont :
 
 | Port | Service |
 |---|---|
+| 80/tcp | Nginx reverse proxy |
 | 22/tcp | SSH |
 | 8080/tcp | GLPI |
 | 3001/tcp | Uptime Kuma |
