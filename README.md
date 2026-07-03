@@ -9,8 +9,6 @@ Déployer une plateforme GLPI conteneurisée sur une infrastructure Linux virtue
 ## Technologies utilisées
 
 - Ubuntu Server
-- Microsoft Azure
-- Terraform
 - Docker
 - Docker Compose
 - GLPI
@@ -42,7 +40,6 @@ L'ensemble sera administré via Git et GitHub.
 ## Structure
 
 ```text
-terraform/
 docker/
 monitoring/
 scripts/
