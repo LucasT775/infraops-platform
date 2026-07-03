@@ -19,12 +19,15 @@ jobs:
           test -f docs/02-sauvegardes-glpi.md
           test -f docs/03-supervision-uptime-kuma.md
           test -f docs/04-securite-linux.md
+          test -f docs/05-reverse-proxy-nginx.md
 
       - name: Check Docker Compose files
         run: |
           test -f docker/glpi/docker-compose.yml
           test -f docker/glpi/.env.example
           test -f docker/uptime-kuma/docker-compose.yml
+          test -f docker/nginx/docker-compose.yml
+          test -f docker/nginx/nginx.conf
 
       - name: Check backup script
         run: |
