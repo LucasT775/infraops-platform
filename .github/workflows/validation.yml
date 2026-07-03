@@ -1,0 +1,32 @@
+name: InfraOps validation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check documentation files
+        run: |
+          test -f README.md
+          test -f docs/01-deploiement-glpi.md
+          test -f docs/02-sauvegardes-glpi.md
+          test -f docs/03-supervision-uptime-kuma.md
+          test -f docs/04-securite-linux.md
+
+      - name: Check Docker Compose files
+        run: |
+          test -f docker/glpi/docker-compose.yml
+          test -f docker/glpi/.env.example
+          test -f docker/uptime-kuma/docker-compose.yml
+
+      - name: Check backup script
+        run: |
+          test -f scripts/backup-glpi.sh
+          grep -q "docker exec" scripts/backup-glpi.sh
