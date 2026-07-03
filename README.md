@@ -4,7 +4,7 @@ Projet réalisé dans le cadre du titre RNCP Administrateur Système DevOps nive
 
 ## Objectif
 
-Déployer une plateforme GLPI conteneurisée sur une infrastructure Azure, avec automatisation, supervision, sauvegarde et sécurisation.
+Déployer une plateforme GLPI conteneurisée sur une infrastructure Linux virtuelle avec automatisation, supervision, sauvegarde et sécurisation.
 
 ## Technologies utilisées
 
@@ -26,9 +26,18 @@ Déployer une plateforme GLPI conteneurisée sur une infrastructure Azure, avec 
 
 ## Architecture du projet
 
-Le projet repose sur un poste d'administration Ubuntu permettant de piloter le déploiement de l'infrastructure cloud avec Terraform.
+Le projet repose sur un poste d'administration Ubuntu exécuté dans VirtualBox.
 
-L'application GLPI et les services associés seront déployés dans des conteneurs Docker sur une machine virtuelle Azure.
+Les différents services seront déployés dans des conteneurs Docker :
+
+- GLPI
+- MariaDB
+- Nginx
+- Prometheus
+- Grafana
+- Uptime Kuma
+
+L'ensemble sera administré via Git et GitHub.
 
 ## Structure
 
